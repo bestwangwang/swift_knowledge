@@ -8,5 +8,9 @@ target 'swift_knowledge' do
   # Pods for swift_knowledge
 
   pod 'IQKeyboardManagerSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'SnapKit'
 
 end
+

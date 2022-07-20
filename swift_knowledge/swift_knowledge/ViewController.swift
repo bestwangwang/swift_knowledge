@@ -6,17 +6,31 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import SnapKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let a = [1]
-        let b = [2]
+
+
     }
 
 
+    @IBAction func tappedOne(_ sender: Any) {
+
+    }
+
+
+    @IBAction func tappedTwo(_ sender: Any) {
+
+    }
+
+    @IBAction func tappedThree(_ sender: Any) {
+
+    }
 
 }
 
