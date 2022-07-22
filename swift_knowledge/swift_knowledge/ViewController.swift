@@ -79,7 +79,7 @@ extension ViewController {
             .disposed(by: disposeBag)
 
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.number = self.number + 1
 
             LogicService.shared.request(url: "R\(self.number)")//.debug()
@@ -90,7 +90,7 @@ extension ViewController {
         }
 
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.number = self.number + 1
             
             LogicService.shared.request(url: "R\(self.number)")//.debug()
