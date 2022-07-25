@@ -10,12 +10,10 @@ import RxSwift
 import RxRelay
 
 struct Token {
-    static let shared = Token()
-
+    /// 保证单次刷新
+    static let lock = NSRecursiveLock()
     /// 是否正在刷新
-    let refreshStatus = BehaviorRelay(value: false)
-
-    static let lock = NSLock()
+    static let refreshStatus = BehaviorRelay(value: false)
 }
 
 class LogicService {
@@ -23,10 +21,8 @@ class LogicService {
 
     let taskQueue = DispatchQueue(label: "logic", attributes: .concurrent)
 
-    let lock = NSRecursiveLock()
-
     func request(url: String) -> Single<String> {
-        return Token.shared.refreshStatus
+        return Token.refreshStatus
             .distinctUntilChanged()
             // 正在刷新的等待，丢弃信号
             .filter { !$0 }
@@ -50,13 +46,13 @@ class LogicService {
                     Token.lock.lock()
 
                     // 没有刷新，则开始刷新
-                    if !Token.shared.refreshStatus.value {
+                    if !Token.refreshStatus.value {
                         print("\(url) 准备刷新Token")
-                        Token.shared.refreshStatus.accept(true)
+                        Token.refreshStatus.accept(true)
                         return self._request(tag: url)
                             .flatMap { _ in
                                 print("\(url) 刷新Token完毕")
-                                Token.shared.refreshStatus.accept(false)
+                                Token.refreshStatus.accept(false)
                                 return self._request(url: url)
                             }
                     }
