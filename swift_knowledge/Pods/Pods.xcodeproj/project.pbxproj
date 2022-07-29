@@ -669,7 +669,7 @@
 		9BAFF22EC5767D238EBEFBEEA1BDCE8D /* RxCollectionViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxCollectionViewDataSourceType.swift; path = RxCocoa/iOS/Protocols/RxCollectionViewDataSourceType.swift; sourceTree = "<group>"; };
 		9C1BAEF8C6DA5674EBB148773D23A105 /* DistinctUntilChanged.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DistinctUntilChanged.swift; path = RxSwift/Observables/DistinctUntilChanged.swift; sourceTree = "<group>"; };
 		9D372C8E8FADBC9273541001CE0D3CBE /* WKWebView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKWebView+Rx.swift"; path = "RxCocoa/iOS/WKWebView+Rx.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D9E911CE4A6B0F532EF7A75D7967CF3 /* UIRefreshControl+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIRefreshControl+Rx.swift"; path = "RxCocoa/iOS/UIRefreshControl+Rx.swift"; sourceTree = "<group>"; };
 		9E2CB8D28CCA20C1455658A0511266AC /* Pods-swift_knowledge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-swift_knowledge-umbrella.h"; sourceTree = "<group>"; };
 		9F0B34D546AF514F1664A7E98C59FA8E /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
@@ -900,7 +900,6 @@
 				C08524813A35D18B956CC124E3424317 /* IQUIViewController+Additions.swift */,
 				F4DE318B9CDBCF5AA7886F8144D4027F /* Support Files */,
 			);
-			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -1082,7 +1081,6 @@
 				DAF5A75FAC0FF3740D3B92AA8529921F /* Zip+Collection.swift */,
 				D93865B8CDF6D686BD17B6E082F5A317 /* Support Files */,
 			);
-			name = RxSwift;
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
@@ -1128,7 +1126,6 @@
 				018C07F570D769098388941233A77950 /* UILayoutSupport+Extensions.swift */,
 				498A15CED2AB610EDDDC2160B853125A /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -1270,7 +1267,6 @@
 				9D372C8E8FADBC9273541001CE0D3CBE /* WKWebView+Rx.swift */,
 				CD2602E30599B7A00AD989A915566F9D /* Support Files */,
 			);
-			name = RxCocoa;
 			path = RxCocoa;
 			sourceTree = "<group>";
 		};
@@ -1304,7 +1300,6 @@
 				CCB50C7ACE6C425383EDD8A7A636F37D /* Utils.swift */,
 				FC1867F30D191AE1A2BAB23309217E61 /* Support Files */,
 			);
-			name = RxRelay;
 			path = RxRelay;
 			sourceTree = "<group>";
 		};

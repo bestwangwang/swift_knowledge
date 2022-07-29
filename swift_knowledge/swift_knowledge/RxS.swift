@@ -8,7 +8,7 @@
 import RxSwift
 import Foundation
 
-class RxS {
+class RxSelected {
 
     let disposeBag = DisposeBag()
 
@@ -29,14 +29,14 @@ class RxS {
             self?.subject3.onNext(1)
         }
 
-
-        onlineObservable = subject1.debug().flatMap { [unowned self] in
-            $0 ? self.subject2.map(Optional.some).asObservable()
-            :
-            .just(nil)
-        }
-        .compactMap { $0 }
-        .share()
+        onlineObservable = subject1.debug()
+            .flatMap { [unowned self] in
+                $0
+                ? self.subject2.map(Optional.some).asObservable()
+                : .just(nil)
+            }
+            .compactMap { $0 }
+            .share()
 
         onlineObservable?.subscribe { [unowned self] event in
             print("event: \(event)")

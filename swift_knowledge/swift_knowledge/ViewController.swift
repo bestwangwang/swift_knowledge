@@ -15,9 +15,47 @@ class ViewController: UIViewController {
     var disposeBag  = DisposeBag()
     var disposable: Disposable?
 
+    let subject = PublishSubject<Observable<String>>()
+
+    let ob1 = PublishSubject<String>()
+    let ob2 = PublishSubject<String>()
+    let ob3 = PublishSubject<String>()
+
+    /// 1.条款
+    /// 2.颂拓涉及到的具体条款
+    /// 3.中国法律的趋势
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        subject.asObservable()
+            .map { Observable.concat($0, self.ob1.asObservable()) }
+            .startWith(self.ob1.asObservable())
+        //            .switchLatest()
+            .flatMap { $0 }
+            .subscribe(onNext: {
+                print("switchLatest: \($0)")
+            })
+            .disposed(by: disposeBag)
+
+
+        //        let ob1 = Observable.just(1)
+        //        let ob2 = Observable<Int>.empty()
+        //        let ob3 = Observable.just(3)
+        //
+        //        Observable.just(ob2)
+        //            .map {
+        //                Observable.concat($0, ob3)
+        //            }
+        //            .startWith(ob1)
+        //            .switchLatest()
+        //            .subscribe(
+        //                onNext: {
+        //                    print("ob: \($0)")
+        //                }
+        //            )
+        //            .disposed(by: disposeBag)
     }
 
     var number = 0
@@ -28,14 +66,69 @@ class ViewController: UIViewController {
 
     @IBAction func tappedTwo(_ sender: Any) {
         onebyoneCase()
+
     }
 
     @IBAction func tappedThree(_ sender: Any) {
-        tokenable = false
+        // tokenable = false
+//        shareSymbol()
+        transformOperators()
     }
 }
 
+let numbers = PublishSubject<Int>()
+
 extension ViewController {
+
+    func transformOperators() {
+
+        numbers.asObservable()
+            .toArray()
+            .subscribe(onSuccess: {
+                dump(type(of: $0))
+                dump($0)
+            })
+            .disposed(by: disposeBag)
+
+        numbers.onNext(1)
+        numbers.onNext(2)
+        numbers.onNext(3)
+        numbers.onCompleted()
+    }
+
+    func shareSymbol(){
+        let observable = netWorking().debug()
+//            .delay(.seconds(2), scheduler: MainScheduler.instance)
+            .asObservable()
+            .share()
+//            .share(replay: 1)
+
+        observable.subscribe(
+            onNext: { content in
+                print(content)
+            }
+        ).disposed(by: disposeBag)
+
+        observable.subscribe(
+            onNext: { content in
+                print(content)
+            }
+        ).disposed(by: disposeBag)
+
+        observable.subscribe(
+            onNext: { content in
+                print(content)
+            }
+        ).disposed(by: disposeBag)
+    }
+
+    func netWorking() -> Single<String>{
+        return Single<String>.create { single in
+            single(.success("贼帅"))
+            print("我执行了")
+            return Disposables.create()
+        }
+    }
 
     /// 同时异步请求
     /// 测试是否重复刷新token
