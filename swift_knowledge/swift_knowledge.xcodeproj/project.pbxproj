@@ -14,6 +14,9 @@
 		25059B1428807352000AA943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25059B1328807352000AA943 /* Assets.xcassets */; };
 		25059B1728807352000AA943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25059B1528807352000AA943 /* LaunchScreen.storyboard */; };
 		253FDD52289CB8A90046350C /* OverrideReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD51289CB8A90046350C /* OverrideReply.swift */; };
+		253FDD58289CBACB0046350C /* RefreshTokenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD57289CBACB0046350C /* RefreshTokenTest.swift */; };
+		253FDD5A289CBB510046350C /* ObserverShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD59289CBB500046350C /* ObserverShare.swift */; };
+		253FDD5E289CBC280046350C /* QueueSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD5D289CBC280046350C /* QueueSync.swift */; };
 		256D0FB52893D835008AB966 /* RxExample in Frameworks */ = {isa = PBXBuildFile; productRef = 256D0FB42893D835008AB966 /* RxExample */; };
 		25E063732887F20A00A87A52 /* ObservabeSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E063722887F20A00A87A52 /* ObservabeSwitch.swift */; };
 		25E0637528880D5600A87A52 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0637428880D5600A87A52 /* TextInputViewController.swift */; };
@@ -32,6 +35,9 @@
 		25059B1628807352000AA943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25059B1828807352000AA943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		253FDD51289CB8A90046350C /* OverrideReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideReply.swift; sourceTree = "<group>"; };
+		253FDD57289CBACB0046350C /* RefreshTokenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenTest.swift; sourceTree = "<group>"; };
+		253FDD59289CBB500046350C /* ObserverShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverShare.swift; sourceTree = "<group>"; };
+		253FDD5D289CBC280046350C /* QueueSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueSync.swift; sourceTree = "<group>"; };
 		2553D3382893D51B00CEA416 /* RxExample */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RxExample; sourceTree = "<group>"; };
 		25E063722887F20A00A87A52 /* ObservabeSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservabeSwitch.swift; sourceTree = "<group>"; };
 		25E0637428880D5600A87A52 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
@@ -85,10 +91,9 @@
 				253FDD53289CB9410046350C /* 1.RefreshToken */,
 				253FDD54289CB9520046350C /* 2.ObservabeSwitch */,
 				253FDD55289CB9930046350C /* 3.OverrideReply */,
-				25059B102880734F000AA943 /* Main.storyboard */,
-				25059B1328807352000AA943 /* Assets.xcassets */,
-				25059B1528807352000AA943 /* LaunchScreen.storyboard */,
-				25059B1828807352000AA943 /* Info.plist */,
+				253FDD5B289CBB560046350C /* 4.ObserverShare */,
+				253FDD5F289CBC300046350C /* 5.QueueSync */,
+				253FDD5C289CBBE10046350C /* Support Files */,
 			);
 			path = swift_knowledge;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				25E0637628880F6400A87A52 /* RefreshToken.swift */,
+				253FDD57289CBACB0046350C /* RefreshTokenTest.swift */,
 			);
 			path = 1.RefreshToken;
 			sourceTree = "<group>";
@@ -123,6 +129,33 @@
 				25E0637428880D5600A87A52 /* TextInputViewController.swift */,
 			);
 			name = 0.KeyboardHide;
+			sourceTree = "<group>";
+		};
+		253FDD5B289CBB560046350C /* 4.ObserverShare */ = {
+			isa = PBXGroup;
+			children = (
+				253FDD59289CBB500046350C /* ObserverShare.swift */,
+			);
+			path = 4.ObserverShare;
+			sourceTree = "<group>";
+		};
+		253FDD5C289CBBE10046350C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				25059B1828807352000AA943 /* Info.plist */,
+				25059B1328807352000AA943 /* Assets.xcassets */,
+				25059B102880734F000AA943 /* Main.storyboard */,
+				25059B1528807352000AA943 /* LaunchScreen.storyboard */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		253FDD5F289CBC300046350C /* 5.QueueSync */ = {
+			isa = PBXGroup;
+			children = (
+				253FDD5D289CBC280046350C /* QueueSync.swift */,
+			);
+			path = 5.QueueSync;
 			sourceTree = "<group>";
 		};
 		2553D3372893D51B00CEA416 /* Packages */ = {
@@ -271,8 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253FDD5A289CBB510046350C /* ObserverShare.swift in Sources */,
 				253FDD52289CB8A90046350C /* OverrideReply.swift in Sources */,
+				253FDD58289CBACB0046350C /* RefreshTokenTest.swift in Sources */,
 				25059B0F2880734F000AA943 /* ViewController.swift in Sources */,
+				253FDD5E289CBC280046350C /* QueueSync.swift in Sources */,
 				25E063732887F20A00A87A52 /* ObservabeSwitch.swift in Sources */,
 				25059B0B2880734F000AA943 /* AppDelegate.swift in Sources */,
 				25059B0D2880734F000AA943 /* SceneDelegate.swift in Sources */,

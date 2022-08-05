@@ -10,6 +10,9 @@ import RxSwift
 
 class OverrideReply {
 
+    var disposeBag  = DisposeBag()
+    var disposable: Disposable?
+
     let subject = PublishSubject<Observable<String>>()
 
     let ob1 = PublishSubject<String>()

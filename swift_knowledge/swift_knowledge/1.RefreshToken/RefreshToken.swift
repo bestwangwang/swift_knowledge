@@ -115,4 +115,3 @@ var tokenable: Bool {
         UserDefaults.standard.set(newValue, forKey: "token")
     }
 }
-
