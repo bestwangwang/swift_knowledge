@@ -15,11 +15,7 @@ class ViewController: UIViewController {
     var disposeBag  = DisposeBag()
     var disposable: Disposable?
 
-    let subject = PublishSubject<Observable<String>>()
-
-    let ob1 = PublishSubject<String>()
-    let ob2 = PublishSubject<String>()
-    let ob3 = PublishSubject<String>()
+    
 
     /// 1.条款
     /// 2.颂拓涉及到的具体条款
@@ -29,33 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        subject.asObservable()
-            .map { Observable.concat($0, self.ob1.asObservable()) }
-            .startWith(self.ob1.asObservable())
-        //            .switchLatest()
-            .flatMap { $0 }
-            .subscribe(onNext: {
-                print("switchLatest: \($0)")
-            })
-            .disposed(by: disposeBag)
-
-
-        //        let ob1 = Observable.just(1)
-        //        let ob2 = Observable<Int>.empty()
-        //        let ob3 = Observable.just(3)
-        //
-        //        Observable.just(ob2)
-        //            .map {
-        //                Observable.concat($0, ob3)
-        //            }
-        //            .startWith(ob1)
-        //            .switchLatest()
-        //            .subscribe(
-        //                onNext: {
-        //                    print("ob: \($0)")
-        //                }
-        //            )
-        //            .disposed(by: disposeBag)
+        
     }
 
     var number = 0

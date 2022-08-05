@@ -8,7 +8,9 @@
 import RxSwift
 import Foundation
 
-class RxSelected {
+
+// Observalbe.flatmap数据流切换
+class ObservabeSwitch {
 
     let disposeBag = DisposeBag()
 
