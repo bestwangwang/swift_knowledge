@@ -29,5 +29,21 @@ import RxSwift
 
 
 
+let countHandler: (Int) -> Void = { index in
+    print(index)
+}
+
+let nameHandler: (String) -> Void = { name in
+    print(name)
+}
+
+var bumb = Bumb()
+
+let cancelable1 = bumb.addSubscription(countHandler)
+let cancelable2 = bumb.addSubscription(nameHandler)
+
+bumb.notify(of: 10)
+bumb.notify(of: "name")
+
 
 dispatchMain()
