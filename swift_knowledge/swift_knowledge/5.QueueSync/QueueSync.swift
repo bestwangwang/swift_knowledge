@@ -58,63 +58,17 @@ class QueueSync {
             print(name)
         }
 
-        var set = SubscriptionSet()
-
-        set.addSubscription(subscriber: countHandler)
-        set.addSubscription(subscriber: nameHandler)
-
-        set.forEach {
-            $0.subscriber(10)
-        }
-
-        set.forEach {
-            $0.subscriber("name")
-        }
-    }
-}
-
-struct Subscription<Event> {
-    let subscriber: (Event) -> Void
-    private let id: String = UUID().uuidString
-}
-
-extension Subscription: Hashable {
-
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
-    static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.id == rhs.id
-    }
-}
-
-struct SubscriptionSet {
-
-    var subscriptions = Set<AnyHashable>()
-    var count: Int { subscriptions.count }
-
-    mutating func insert<T: Hashable>(_ subscription: T) {
-        _ = subscriptions.insert(subscription)
-    }
-
-    mutating func remove<T: Hashable>(_ subscription: T) {
-        _ = subscriptions.remove(subscription)
-    }
-}
-
-extension SubscriptionSet {
-
-    mutating func addSubscription<Event>(subscriber: @escaping (Event) -> Void) {
-        insert(Subscription(subscriber: subscriber))
-    }
-
-    func forEach<Event>(_ body: (Subscription<Event>) -> Void) {
-        let matchs = subscriptions.compactMap {
-            $0.base as? Subscription<Event>
-        }
-
-        matchs.forEach(body)
+//        var set = SubscriptionSet()
+//
+//        set.addSubscription(subscriber: countHandler)
+//        set.addSubscription(subscriber: nameHandler)
+//
+//        set.forEach {
+//            $0.subscriber(10)
+//        }
+//
+//        set.forEach {
+//            $0.subscriber("name")
+//        }
     }
 }

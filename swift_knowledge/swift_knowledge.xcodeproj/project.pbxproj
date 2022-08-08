@@ -18,7 +18,6 @@
 		253FDD5A289CBB510046350C /* ObserverShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD59289CBB500046350C /* ObserverShare.swift */; };
 		253FDD5E289CBC280046350C /* QueueSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD5D289CBC280046350C /* QueueSync.swift */; };
 		253FDD62289CFD8B0046350C /* SubscriptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD61289CFD8B0046350C /* SubscriptionSet.swift */; };
-		256D0FB52893D835008AB966 /* RxExample in Frameworks */ = {isa = PBXBuildFile; productRef = 256D0FB42893D835008AB966 /* RxExample */; };
 		25E063732887F20A00A87A52 /* ObservabeSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E063722887F20A00A87A52 /* ObservabeSwitch.swift */; };
 		25E0637528880D5600A87A52 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0637428880D5600A87A52 /* TextInputViewController.swift */; };
 		25E0637728880F6400A87A52 /* RefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0637628880F6400A87A52 /* RefreshToken.swift */; };
@@ -40,7 +39,7 @@
 		253FDD59289CBB500046350C /* ObserverShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverShare.swift; sourceTree = "<group>"; };
 		253FDD5D289CBC280046350C /* QueueSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueSync.swift; sourceTree = "<group>"; };
 		253FDD61289CFD8B0046350C /* SubscriptionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionSet.swift; sourceTree = "<group>"; };
-		2553D3382893D51B00CEA416 /* RxExample */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RxExample; sourceTree = "<group>"; };
+		255D717D289F617900296BF8 /* SwiftCommunity */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftCommunity; sourceTree = "<group>"; };
 		25E063722887F20A00A87A52 /* ObservabeSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservabeSwitch.swift; sourceTree = "<group>"; };
 		25E0637428880D5600A87A52 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		25E0637628880F6400A87A52 /* RefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = "<group>"; };
@@ -57,7 +56,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A6FD0226C4B59D3932195E4 /* Pods_swift_knowledge.framework in Frameworks */,
-				256D0FB52893D835008AB966 /* RxExample in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +170,7 @@
 		2553D3372893D51B00CEA416 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				2553D3382893D51B00CEA416 /* RxExample */,
+				255D717D289F617900296BF8 /* SwiftCommunity */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -216,7 +214,6 @@
 			);
 			name = swift_knowledge;
 			packageProductDependencies = (
-				256D0FB42893D835008AB966 /* RxExample */,
 			);
 			productName = swift_knowledge;
 			productReference = 25059B072880734F000AA943 /* swift_knowledge.app */;
@@ -545,13 +542,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		256D0FB42893D835008AB966 /* RxExample */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RxExample;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 25059AFF2880734F000AA943 /* Project object */;
 }

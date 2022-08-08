@@ -51,13 +51,25 @@
                                             <constraint firstAttribute="height" constant="250" id="BO3-t4-NQa"/>
                                         </constraints>
                                     </stackView>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XA7-5w-NOR">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Uca-8h-FaQ" secondAttribute="trailing" constant="40" id="37P-4j-JOS"/>
+                                    <constraint firstAttribute="trailing" secondItem="XA7-5w-NOR" secondAttribute="trailing" id="JTT-mS-5dW"/>
                                     <constraint firstItem="Uca-8h-FaQ" firstAttribute="centerX" secondItem="q58-BT-87I" secondAttribute="centerX" id="Jbp-uL-0JL"/>
                                     <constraint firstItem="Uca-8h-FaQ" firstAttribute="centerY" secondItem="q58-BT-87I" secondAttribute="centerY" id="NZQ-50-RQg"/>
                                     <constraint firstItem="Uca-8h-FaQ" firstAttribute="leading" secondItem="q58-BT-87I" secondAttribute="leading" constant="40" id="aRX-I0-Iky"/>
+                                    <constraint firstAttribute="bottom" secondItem="XA7-5w-NOR" secondAttribute="bottom" id="gHD-ki-ts7"/>
+                                    <constraint firstItem="XA7-5w-NOR" firstAttribute="top" secondItem="q58-BT-87I" secondAttribute="top" id="hMz-bU-7Rd"/>
+                                    <constraint firstItem="XA7-5w-NOR" firstAttribute="leading" secondItem="q58-BT-87I" secondAttribute="leading" id="xJx-sG-ynh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -71,6 +83,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n3U-JF-efI"/>
+                    <connections>
+                        <outlet property="webView" destination="XA7-5w-NOR" id="cE0-0T-5wv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

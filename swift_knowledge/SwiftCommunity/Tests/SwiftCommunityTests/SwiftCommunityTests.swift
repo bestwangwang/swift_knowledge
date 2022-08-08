@@ -1,11 +1,11 @@
 import XCTest
-@testable import RxExample
+@testable import SwiftCommunity
 
-final class RxExampleTests: XCTestCase {
+final class SwiftCommunityTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(RxExample().text, "Hello, World!")
+        XCTAssertEqual(SwiftCommunity().text, "Hello, World!")
     }
 }

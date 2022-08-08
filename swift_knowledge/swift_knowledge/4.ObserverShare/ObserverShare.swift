@@ -37,5 +37,22 @@ class ObserverShare {
             }
         ).disposed(by: disposeBag)
     }
-    
+
+    let numbers = PublishSubject<Int>()
+
+    func transformOperators() {
+
+        numbers.asObservable()
+            .toArray()
+            .subscribe(onSuccess: {
+                dump(type(of: $0))
+                dump($0)
+            })
+            .disposed(by: disposeBag)
+
+        numbers.onNext(1)
+        numbers.onNext(2)
+        numbers.onNext(3)
+        numbers.onCompleted()
+    }
 }
