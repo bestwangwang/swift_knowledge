@@ -13,6 +13,12 @@
 		25059B122880734F000AA943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25059B102880734F000AA943 /* Main.storyboard */; };
 		25059B1428807352000AA943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25059B1328807352000AA943 /* Assets.xcassets */; };
 		25059B1728807352000AA943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25059B1528807352000AA943 /* LaunchScreen.storyboard */; };
+		253160E828A3590F0095D355 /* BEEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253160E728A3590F0095D355 /* BEEViewController.swift */; };
+		253160EA28A3A1D10095D355 /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253160E928A3A1D10095D355 /* FeaturesViewController.swift */; };
+		253160EC28A3A58C0095D355 /* DiscoverDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253160EB28A3A58C0095D355 /* DiscoverDeviceView.swift */; };
+		253160EE28A3AC060095D355 /* SwiftCommunity in Frameworks */ = {isa = PBXBuildFile; productRef = 253160ED28A3AC060095D355 /* SwiftCommunity */; };
+		253160F128A3C2140095D355 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 253160F028A3C2140095D355 /* RxCocoa */; };
+		253160F328A3C2140095D355 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 253160F228A3C2140095D355 /* RxSwift */; };
 		253FDD52289CB8A90046350C /* OverrideReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD51289CB8A90046350C /* OverrideReply.swift */; };
 		253FDD58289CBACB0046350C /* RefreshTokenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD57289CBACB0046350C /* RefreshTokenTest.swift */; };
 		253FDD5A289CBB510046350C /* ObserverShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD59289CBB500046350C /* ObserverShare.swift */; };
@@ -34,6 +40,9 @@
 		25059B1328807352000AA943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25059B1628807352000AA943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25059B1828807352000AA943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		253160E728A3590F0095D355 /* BEEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEViewController.swift; sourceTree = "<group>"; };
+		253160E928A3A1D10095D355 /* FeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesViewController.swift; sourceTree = "<group>"; };
+		253160EB28A3A58C0095D355 /* DiscoverDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverDeviceView.swift; sourceTree = "<group>"; };
 		253FDD51289CB8A90046350C /* OverrideReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideReply.swift; sourceTree = "<group>"; };
 		253FDD57289CBACB0046350C /* RefreshTokenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenTest.swift; sourceTree = "<group>"; };
 		253FDD59289CBB500046350C /* ObserverShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverShare.swift; sourceTree = "<group>"; };
@@ -55,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253160F128A3C2140095D355 /* RxCocoa in Frameworks */,
+				253160EE28A3AC060095D355 /* SwiftCommunity in Frameworks */,
+				253160F328A3C2140095D355 /* RxSwift in Frameworks */,
 				9A6FD0226C4B59D3932195E4 /* Pods_swift_knowledge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +99,8 @@
 				25059B0A2880734F000AA943 /* AppDelegate.swift */,
 				25059B0C2880734F000AA943 /* SceneDelegate.swift */,
 				25059B0E2880734F000AA943 /* ViewController.swift */,
+				253160E928A3A1D10095D355 /* FeaturesViewController.swift */,
+				253160E628A358E80095D355 /* 7.Bluetooth */,
 				253FDD56289CB9D60046350C /* 0.KeyboardHide */,
 				253FDD53289CB9410046350C /* 1.RefreshToken */,
 				253FDD54289CB9520046350C /* 2.ObservabeSwitch */,
@@ -97,6 +111,15 @@
 				253FDD5C289CBBE10046350C /* Support Files */,
 			);
 			path = swift_knowledge;
+			sourceTree = "<group>";
+		};
+		253160E628A358E80095D355 /* 7.Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				253160E728A3590F0095D355 /* BEEViewController.swift */,
+				253160EB28A3A58C0095D355 /* DiscoverDeviceView.swift */,
+			);
+			path = 7.Bluetooth;
 			sourceTree = "<group>";
 		};
 		253FDD53289CB9410046350C /* 1.RefreshToken */ = {
@@ -214,6 +237,9 @@
 			);
 			name = swift_knowledge;
 			packageProductDependencies = (
+				253160ED28A3AC060095D355 /* SwiftCommunity */,
+				253160F028A3C2140095D355 /* RxCocoa */,
+				253160F228A3C2140095D355 /* RxSwift */,
 			);
 			productName = swift_knowledge;
 			productReference = 25059B072880734F000AA943 /* swift_knowledge.app */;
@@ -243,6 +269,9 @@
 				Base,
 			);
 			mainGroup = 25059AFE2880734F000AA943;
+			packageReferences = (
+				253160EF28A3C2140095D355 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 25059B082880734F000AA943 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -312,11 +341,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253160EA28A3A1D10095D355 /* FeaturesViewController.swift in Sources */,
 				253FDD5A289CBB510046350C /* ObserverShare.swift in Sources */,
 				253FDD52289CB8A90046350C /* OverrideReply.swift in Sources */,
+				253160EC28A3A58C0095D355 /* DiscoverDeviceView.swift in Sources */,
 				253FDD58289CBACB0046350C /* RefreshTokenTest.swift in Sources */,
 				25059B0F2880734F000AA943 /* ViewController.swift in Sources */,
 				253FDD5E289CBC280046350C /* QueueSync.swift in Sources */,
+				253160E828A3590F0095D355 /* BEEViewController.swift in Sources */,
 				25E063732887F20A00A87A52 /* ObservabeSwitch.swift in Sources */,
 				25059B0B2880734F000AA943 /* AppDelegate.swift in Sources */,
 				253FDD62289CFD8B0046350C /* SubscriptionSet.swift in Sources */,
@@ -472,8 +504,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W5V8836L2P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = swift_knowledge/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "总是描述";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "外围设备";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -484,7 +519,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.benco.develop.swift-knowledge";
+				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop.r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -500,8 +535,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W5V8836L2P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = swift_knowledge/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "总是描述";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "外围设备";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -512,7 +550,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.benco.develop.swift-knowledge";
+				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop.r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -542,6 +580,34 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		253160EF28A3C2140095D355 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		253160ED28A3AC060095D355 /* SwiftCommunity */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftCommunity;
+		};
+		253160F028A3C2140095D355 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 253160EF28A3C2140095D355 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		253160F228A3C2140095D355 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 253160EF28A3C2140095D355 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 25059AFF2880734F000AA943 /* Project object */;
 }

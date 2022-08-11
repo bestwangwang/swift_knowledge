@@ -96,6 +96,15 @@ import RxSwift
 //
 //typealias DictionaryIN = Dictionary<Name Int>
 
+var list = [Int]()
+print(list.endIndex)
+print(list)
+list.insert(0, at: list.endIndex)
+print(list.endIndex)
+print(list)
+list.insert(1, at: list.endIndex)
+print(list.endIndex)
+print(list)
 
-dispatchMain()
+//dispatchMain()
 

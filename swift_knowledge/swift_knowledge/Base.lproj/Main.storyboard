@@ -27,7 +27,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="SEND"/>
                                                 <connections>
-                                                    <action selector="tappedOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5pA-CO-FYY"/>
+                                                    <action selector="tappedSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eyr-ie-3ad"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3R3-Pc-x25">
@@ -35,7 +35,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="CANCEL"/>
                                                 <connections>
-                                                    <action selector="tappedTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="945-eZ-6bc"/>
+                                                    <action selector="tappedCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oZZ-BU-0Dj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEW-ri-VFE">
@@ -43,7 +43,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="DISPOSE"/>
                                                 <connections>
-                                                    <action selector="tappedThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MiW-Dk-fqx"/>
+                                                    <action selector="tappedDispose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D9H-bC-vRY"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -51,25 +51,13 @@
                                             <constraint firstAttribute="height" constant="250" id="BO3-t4-NQa"/>
                                         </constraints>
                                     </stackView>
-                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XA7-5w-NOR">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                            <wkPreferences key="preferences"/>
-                                        </wkWebViewConfiguration>
-                                    </wkWebView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Uca-8h-FaQ" secondAttribute="trailing" constant="40" id="37P-4j-JOS"/>
-                                    <constraint firstAttribute="trailing" secondItem="XA7-5w-NOR" secondAttribute="trailing" id="JTT-mS-5dW"/>
                                     <constraint firstItem="Uca-8h-FaQ" firstAttribute="centerX" secondItem="q58-BT-87I" secondAttribute="centerX" id="Jbp-uL-0JL"/>
                                     <constraint firstItem="Uca-8h-FaQ" firstAttribute="centerY" secondItem="q58-BT-87I" secondAttribute="centerY" id="NZQ-50-RQg"/>
                                     <constraint firstItem="Uca-8h-FaQ" firstAttribute="leading" secondItem="q58-BT-87I" secondAttribute="leading" constant="40" id="aRX-I0-Iky"/>
-                                    <constraint firstAttribute="bottom" secondItem="XA7-5w-NOR" secondAttribute="bottom" id="gHD-ki-ts7"/>
-                                    <constraint firstItem="XA7-5w-NOR" firstAttribute="top" secondItem="q58-BT-87I" secondAttribute="top" id="hMz-bU-7Rd"/>
-                                    <constraint firstItem="XA7-5w-NOR" firstAttribute="leading" secondItem="q58-BT-87I" secondAttribute="leading" id="xJx-sG-ynh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -82,14 +70,33 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q58-BT-87I" secondAttribute="trailing" id="xqP-2E-eWA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="n3U-JF-efI"/>
-                    <connections>
-                        <outlet property="webView" destination="XA7-5w-NOR" id="cE0-0T-5wv"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="n3U-JF-efI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="niD-Di-TLw">
+                            <connections>
+                                <segue destination="Bde-ZG-v0t" kind="show" id="Ayu-pY-7Js"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="47.544642857142854"/>
+        </scene>
+        <!--Features View Controller-->
+        <scene sceneID="PS6-51-f2z">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Bde-ZG-v0t" customClass="FeaturesViewController" customModule="swift_knowledge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pln-3y-sZv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iIz-u9-ZAS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z5y-gK-56b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gfi-LD-FFB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="44"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3jD-mr-bH9">
