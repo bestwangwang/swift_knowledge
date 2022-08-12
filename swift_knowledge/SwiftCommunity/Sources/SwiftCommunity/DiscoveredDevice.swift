@@ -57,7 +57,7 @@ public extension DiscoveredDevice {
  *  @discussion A <code>NSNumber</code> containing the transmit power of a peripheral.
  *
  */
-    var advTxPowerLevelKey: NSNumber? {
+    var advTxPowerLevel: NSNumber? {
         advertisementData[CBAdvertisementDataTxPowerLevelKey] as? NSNumber
     }
 
@@ -67,8 +67,8 @@ public extension DiscoveredDevice {
  *  @discussion A list of one or more <code>CBUUID</code> objects, representing <code>CBService</code> UUIDs.
  *
  */
-    var advServiceUUIDsKey: CBUUID? {
-        advertisementData[CBAdvertisementDataServiceUUIDsKey] as? CBUUID
+    var advServiceUUIDs: [CBUUID] {
+        advertisementData[CBAdvertisementDataServiceUUIDsKey] as? [CBUUID] ?? []
     }
 
 /**
@@ -78,8 +78,8 @@ public extension DiscoveredDevice {
  *              <code>CBService</code> UUIDs. Values are <code>NSData</code> objects.
  *
  */
-    var advServiceDataKey: Dictionary<CBUUID, CBService>? {
-        advertisementData[CBAdvertisementDataServiceDataKey] as? Dictionary<CBUUID, CBService>
+    var advServiceData: NSDictionary? {
+        advertisementData[CBAdvertisementDataServiceDataKey] as? NSDictionary
     }
 
 /**
@@ -88,7 +88,7 @@ public extension DiscoveredDevice {
  *  @discussion A <code>NSData</code> object containing the manufacturer data of a peripheral.
  *
  */
-    var advManufacturerDataKey: String? {
+    var advManufacturerData: String? {
         advertisementData[CBAdvertisementDataManufacturerDataKey] as? String
     }
 
@@ -102,7 +102,7 @@ public extension DiscoveredDevice {
  *  @see        startAdvertising:
  *
  */
-    var advOverflowServiceUUIDsKey: [CBUUID] {
+    var advOverflowServiceUUIDs: [CBUUID] {
         advertisementData[CBAdvertisementDataOverflowServiceUUIDsKey] as? [CBUUID] ?? []
     }
 
@@ -123,7 +123,7 @@ public extension DiscoveredDevice {
  *  @discussion A list of one or more <code>CBUUID</code> objects, representing <code>CBService</code> UUIDs.
  *
  */
-    var advSolicitedServiceUUIDsKey: [CBUUID] {
+    var advSolicitedServiceUUIDs: [CBUUID] {
         advertisementData[CBAdvertisementDataSolicitedServiceUUIDsKey] as? [CBUUID] ?? []
     }
 

@@ -56,7 +56,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
     }
 
     public func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-//        print("didDiscover: \ncentral: \(central)\nperipheral: \(peripheral)\nadvertisementData: \(advertisementData)\nrssi: \(RSSI)")
+        print("didDiscover: \ncentral: \(central)\nperipheral: \(peripheral)\nadvertisementData: \(advertisementData)\nrssi: \(RSSI)")
 
         peripherals[peripheral.identifier] = DiscoveredDevice(
             peripheral: peripheral, advertisementData: advertisementData, rssi: RSSI
