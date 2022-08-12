@@ -96,8 +96,6 @@
 		25059B092880734F000AA943 /* swift_knowledge */ = {
 			isa = PBXGroup;
 			children = (
-				25059B0A2880734F000AA943 /* AppDelegate.swift */,
-				25059B0C2880734F000AA943 /* SceneDelegate.swift */,
 				25059B0E2880734F000AA943 /* ViewController.swift */,
 				253160E928A3A1D10095D355 /* FeaturesViewController.swift */,
 				253160E628A358E80095D355 /* 7.Bluetooth */,
@@ -166,6 +164,8 @@
 		253FDD5C289CBBE10046350C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				25059B0A2880734F000AA943 /* AppDelegate.swift */,
+				25059B0C2880734F000AA943 /* SceneDelegate.swift */,
 				25059B1828807352000AA943 /* Info.plist */,
 				25059B1328807352000AA943 /* Assets.xcassets */,
 				25059B102880734F000AA943 /* Main.storyboard */,

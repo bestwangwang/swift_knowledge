@@ -16,13 +16,37 @@ struct DiscoverDeviceView: View {
     var body: some View {
         List {
             ForEach(scanner.devices) { device in
-                VStack(alignment: .leading) {
-                    Text(device.peripheral.name ?? "unkonwn")
-                    Text("\(device.peripheral.state.rawValue)")
-//                    Text(device.identifier.uuidString)
-                    Text("\(device.advertisementData[CBAdvertisementDataLocalNameKey] as? String ?? "unkonwn")")
+                NavigationLink {
+                    DeviceInfoView(device: device)
+                } label: {
+                    VStack(alignment: .leading, spacing: 2) {
+                        HStack {
+                            Text(device.name)
+                            Spacer()
+                            Text(device.rssi.stringValue )
+                        }
+                        HStack {
+                            Text("\(device.state)")
+                            Spacer()
+                            Text("ancs:\(device.ancsAuthorized ? "1" : "0")")
+                        }
+                        Text("service：\(device.peripheral.services?.count ?? 0)")
+                    }
                 }
-            }
+            }  
+        }
+    }
+}
+
+struct DeviceInfoView: View {
+    var device: DiscoveredDevice
+    var body: some View {
+        VStack {
+            Text(device.name)
+            Text("\(device.advServiceDataKey.debugDescription)")
+
+//            Text("\(device.advertisementData.debugDescription)")
+            Spacer()
         }
     }
 }

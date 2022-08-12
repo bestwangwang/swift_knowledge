@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SwiftCommunity
 
 class ViewController: UIViewController {
 
@@ -25,7 +26,11 @@ class ViewController: UIViewController {
 
     @IBAction func tappedCancel(_ sender: Any) {
 
-        
+        var abc = parsedNameAndPairingIdFrom(localName: "Ambit3V #P1539195")
+//        var abc = parsedNameAndPairingIdFrom(localName: "Spartan SportWHR 016411300074")
+
+        print("\(abc?.name)")
+        print("\(abc?.pairingId)")
     }
 
     @IBAction func tappedDispose(_ sender: Any) {
