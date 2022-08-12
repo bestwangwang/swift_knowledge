@@ -33,23 +33,3 @@ class RegularExpression {
         }
     }
 }
-
-public func parsedNameAndPairingIdFrom(localName: String) -> (name: String, pairingId: String)? {
-    do {
-        // The local name for Suunto peripherals is comprised of the device model name
-        // and unique identifier separated by whitespace, e.g., "Spartan SportWHR 016411300074".
-        // #P is optional in front of the serial and marks for a prototype device, e.g., "Ambit3V #P1539195", # is excluded from the serial.
-        let expression = try NSRegularExpression(pattern: "^(.+)\\s+[#]?([P]?[A-Z0-9]+)$", options: [])
-        let trimmedLocalName = localName.trimmingCharacters(in: CharacterSet.whitespaces)
-
-        if let match = expression.firstMatch(in: trimmedLocalName, options: [], range: trimmedLocalName.nsrange),
-            let name = trimmedLocalName.substring(with: match.range(at: 1)),
-            let identifier = trimmedLocalName.substring(with: match.range(at: 2)) {
-            return (name, identifier)
-        } else {
-            return nil
-        }
-    } catch {
-        return nil
-    }
-}
