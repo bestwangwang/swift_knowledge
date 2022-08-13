@@ -13,6 +13,8 @@
 		25059B122880734F000AA943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25059B102880734F000AA943 /* Main.storyboard */; };
 		25059B1428807352000AA943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25059B1328807352000AA943 /* Assets.xcassets */; };
 		25059B1728807352000AA943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25059B1528807352000AA943 /* LaunchScreen.storyboard */; };
+		25148C7628A5F57C005DA4D6 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25148C7528A5F57C005DA4D6 /* RegularExpression.swift */; };
+		25148C7A28A64626005DA4D6 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25148C7928A64626005DA4D6 /* MessageManager.swift */; };
 		253160E828A3590F0095D355 /* BEEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253160E728A3590F0095D355 /* BEEViewController.swift */; };
 		253160EA28A3A1D10095D355 /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253160E928A3A1D10095D355 /* FeaturesViewController.swift */; };
 		253160EC28A3A58C0095D355 /* DiscoverDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253160EB28A3A58C0095D355 /* DiscoverDeviceView.swift */; };
@@ -40,6 +42,8 @@
 		25059B1328807352000AA943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25059B1628807352000AA943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25059B1828807352000AA943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25148C7528A5F57C005DA4D6 /* RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpression.swift; sourceTree = "<group>"; };
+		25148C7928A64626005DA4D6 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
 		253160E728A3590F0095D355 /* BEEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEViewController.swift; sourceTree = "<group>"; };
 		253160E928A3A1D10095D355 /* FeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesViewController.swift; sourceTree = "<group>"; };
 		253160EB28A3A58C0095D355 /* DiscoverDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverDeviceView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 			children = (
 				25059B0E2880734F000AA943 /* ViewController.swift */,
 				253160E928A3A1D10095D355 /* FeaturesViewController.swift */,
+				25148C7428A5F2C7005DA4D6 /* 8.RegularExpression */,
 				253160E628A358E80095D355 /* 7.Bluetooth */,
 				253FDD56289CB9D60046350C /* 0.KeyboardHide */,
 				253FDD53289CB9410046350C /* 1.RefreshToken */,
@@ -109,6 +114,14 @@
 				253FDD5C289CBBE10046350C /* Support Files */,
 			);
 			path = swift_knowledge;
+			sourceTree = "<group>";
+		};
+		25148C7428A5F2C7005DA4D6 /* 8.RegularExpression */ = {
+			isa = PBXGroup;
+			children = (
+				25148C7528A5F57C005DA4D6 /* RegularExpression.swift */,
+			);
+			path = 8.RegularExpression;
 			sourceTree = "<group>";
 		};
 		253160E628A358E80095D355 /* 7.Bluetooth */ = {
@@ -186,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				253FDD61289CFD8B0046350C /* SubscriptionSet.swift */,
+				25148C7928A64626005DA4D6 /* MessageManager.swift */,
 			);
 			path = 6.SubscriptionSet;
 			sourceTree = "<group>";
@@ -346,6 +360,7 @@
 				253FDD52289CB8A90046350C /* OverrideReply.swift in Sources */,
 				253160EC28A3A58C0095D355 /* DiscoverDeviceView.swift in Sources */,
 				253FDD58289CBACB0046350C /* RefreshTokenTest.swift in Sources */,
+				25148C7628A5F57C005DA4D6 /* RegularExpression.swift in Sources */,
 				25059B0F2880734F000AA943 /* ViewController.swift in Sources */,
 				253FDD5E289CBC280046350C /* QueueSync.swift in Sources */,
 				253160E828A3590F0095D355 /* BEEViewController.swift in Sources */,
@@ -355,6 +370,7 @@
 				25059B0D2880734F000AA943 /* SceneDelegate.swift in Sources */,
 				25E0637528880D5600A87A52 /* TextInputViewController.swift in Sources */,
 				25E0637728880F6400A87A52 /* RefreshToken.swift in Sources */,
+				25148C7A28A64626005DA4D6 /* MessageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

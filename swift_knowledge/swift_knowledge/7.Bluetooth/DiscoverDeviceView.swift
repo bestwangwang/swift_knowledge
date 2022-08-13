@@ -19,7 +19,7 @@ struct DiscoverDeviceView: View {
                 NavigationLink {
                     DeviceInfoView(device: device)
                 } label: {
-                    VStack(alignment: .leading, spacing: 2) {
+                    VStack(alignment: .leading, spacing: 3) {
                         HStack {
                             Text(device.name)
                             Spacer()
@@ -30,7 +30,12 @@ struct DiscoverDeviceView: View {
                             Spacer()
                             Text("ancs:\(device.ancsAuthorized ? "1" : "0")")
                         }
-                        Text("service：\(device.peripheral.services?.count ?? 0)")
+                        HStack {
+                            Text("service：\(device.advServiceUUIDs.count)")
+                            Spacer()
+                            Text("service：\(device.advServiceData?.count ?? 0)")
+                        }
+                        Text("power：\(device.advTxPowerLevel?.stringValue ?? "")")
                     }
                 }
             }  
@@ -43,9 +48,12 @@ struct DeviceInfoView: View {
     var body: some View {
         VStack {
             Text(device.name)
-            Text("\(device.advServiceDataKey.debugDescription)")
 
-//            Text("\(device.advertisementData.debugDescription)")
+            ForEach(device.advServiceUUIDs, id: \.self) { uuid in
+                Text("servce: \(uuid)")
+            }
+
+            Text("\(device.advertisementData.debugDescription)")
             Spacer()
         }
     }
