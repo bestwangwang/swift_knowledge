@@ -18,15 +18,37 @@ import UIKit
  4. 取消：提供可取消的事件
  */
 
-public class MessageToken {
-    public let onCancel: () -> Void
+protocol Cancelble {
+    func onCancel();
+}
+
+public class MessageToken: Cancelble {
+    public let cancel: () -> Void
 
     init(cancel: @escaping () -> Void) {
-        onCancel = cancel
+        self.cancel = cancel
+    }
+
+    func onCancel() {
+        cancel()
+    }
+}
+
+extension MessageToken {
+    func dispose(by bag: MessageDispose) {
+        bag.add(token: self)
+    }
+}
+
+class MessageDispose {
+    private var disposes: [Cancelble] = []
+
+    func add(token: Cancelble) {
+        disposes.append(token)
     }
 
     deinit {
-        onCancel()
+        disposes.forEach { $0.onCancel() }
     }
 }
 

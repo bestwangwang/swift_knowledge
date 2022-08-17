@@ -12,9 +12,7 @@ import SwiftCommunity
 
 class ViewController: UIViewController {
 
-    var token1: MessageToken?
-
-    var token2: MessageToken?
+    var messageDispose = MessageDispose()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +24,27 @@ class ViewController: UIViewController {
             print("\($0)--\($1)")
         }
 
-        token1 = MessageManager.addMessage(handler)
+        MessageManager.addMessage(handler).dispose(by: messageDispose)
 
         let handle2: (String) -> Void = {
             print("\($0)")
-        }
 
-        token2 = MessageManager.addMessage(handle2)
+        }
+        MessageManager.addMessage({ (a: String) in
+            print(a)
+        }).dispose(by: messageDispose)
+
+        let abc = MessageManager.addMessage({ (men: String) in
+            print("折叠屏幕很好用啊，机械键盘真的很牛叉，托多的好用，声音很哈听India那个以打算您覅了掉地诶接覅 ID爱上大姐夫 打死来看待举 ")
+        })
+
+
+
+
+
+
+
+        MessageManager.addMessage(handle2).dispose(by: messageDispose)
     }
 
     @IBAction func tappedCancel(_ sender: Any) {
