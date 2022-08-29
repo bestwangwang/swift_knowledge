@@ -11,6 +11,6 @@ target 'swift_knowledge' do
 #  pod 'RxSwift'
 #  pod 'RxCocoa'
   pod 'SnapKit'
-
+  pod 'SVGAPlayer'
 end
 

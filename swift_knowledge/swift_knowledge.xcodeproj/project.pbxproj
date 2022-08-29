@@ -19,13 +19,17 @@
 		253160EA28A3A1D10095D355 /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253160E928A3A1D10095D355 /* FeaturesViewController.swift */; };
 		253160EC28A3A58C0095D355 /* DiscoverDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253160EB28A3A58C0095D355 /* DiscoverDeviceView.swift */; };
 		253160EE28A3AC060095D355 /* SwiftCommunity in Frameworks */ = {isa = PBXBuildFile; productRef = 253160ED28A3AC060095D355 /* SwiftCommunity */; };
-		253160F128A3C2140095D355 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 253160F028A3C2140095D355 /* RxCocoa */; };
-		253160F328A3C2140095D355 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 253160F228A3C2140095D355 /* RxSwift */; };
+		253A677428B30BE100A3FAA1 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 253A677328B30BE100A3FAA1 /* RxBlocking */; };
+		253A677628B30BE100A3FAA1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 253A677528B30BE100A3FAA1 /* RxCocoa */; };
+		253A677828B30BE100A3FAA1 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 253A677728B30BE100A3FAA1 /* RxRelay */; };
+		253A677A28B30BE100A3FAA1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 253A677928B30BE100A3FAA1 /* RxSwift */; };
 		253FDD52289CB8A90046350C /* OverrideReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD51289CB8A90046350C /* OverrideReply.swift */; };
 		253FDD58289CBACB0046350C /* RefreshTokenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD57289CBACB0046350C /* RefreshTokenTest.swift */; };
 		253FDD5A289CBB510046350C /* ObserverShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD59289CBB500046350C /* ObserverShare.swift */; };
 		253FDD5E289CBC280046350C /* QueueSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD5D289CBC280046350C /* QueueSync.swift */; };
 		253FDD62289CFD8B0046350C /* SubscriptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FDD61289CFD8B0046350C /* SubscriptionSet.swift */; };
+		2593503228AFBF2700D2DB6E /* dio.png in Resources */ = {isa = PBXBuildFile; fileRef = 2593503128AFBF2700D2DB6E /* dio.png */; };
+		2593503528AFBFA900D2DB6E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593503428AFBFA900D2DB6E /* Storage.swift */; };
 		25E063732887F20A00A87A52 /* ObservabeSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E063722887F20A00A87A52 /* ObservabeSwitch.swift */; };
 		25E0637528880D5600A87A52 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0637428880D5600A87A52 /* TextInputViewController.swift */; };
 		25E0637728880F6400A87A52 /* RefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0637628880F6400A87A52 /* RefreshToken.swift */; };
@@ -52,7 +56,9 @@
 		253FDD59289CBB500046350C /* ObserverShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverShare.swift; sourceTree = "<group>"; };
 		253FDD5D289CBC280046350C /* QueueSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueSync.swift; sourceTree = "<group>"; };
 		253FDD61289CFD8B0046350C /* SubscriptionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionSet.swift; sourceTree = "<group>"; };
-		255D717D289F617900296BF8 /* SwiftCommunity */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftCommunity; sourceTree = "<group>"; };
+		2593503128AFBF2700D2DB6E /* dio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dio.png; sourceTree = "<group>"; };
+		2593503428AFBFA900D2DB6E /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		25D4FE3828B2752D0079742B /* SwiftCommunity */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftCommunity; sourceTree = "<group>"; };
 		25E063722887F20A00A87A52 /* ObservabeSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservabeSwitch.swift; sourceTree = "<group>"; };
 		25E0637428880D5600A87A52 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		25E0637628880F6400A87A52 /* RefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = "<group>"; };
@@ -68,9 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253160F128A3C2140095D355 /* RxCocoa in Frameworks */,
+				253A677A28B30BE100A3FAA1 /* RxSwift in Frameworks */,
+				253A677828B30BE100A3FAA1 /* RxRelay in Frameworks */,
 				253160EE28A3AC060095D355 /* SwiftCommunity in Frameworks */,
-				253160F328A3C2140095D355 /* RxSwift in Frameworks */,
+				253A677428B30BE100A3FAA1 /* RxBlocking in Frameworks */,
+				253A677628B30BE100A3FAA1 /* RxCocoa in Frameworks */,
 				9A6FD0226C4B59D3932195E4 /* Pods_swift_knowledge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,8 +108,10 @@
 		25059B092880734F000AA943 /* swift_knowledge */ = {
 			isa = PBXGroup;
 			children = (
+				2593503128AFBF2700D2DB6E /* dio.png */,
 				25059B0E2880734F000AA943 /* ViewController.swift */,
 				253160E928A3A1D10095D355 /* FeaturesViewController.swift */,
+				2593503328AFBF8800D2DB6E /* 9.Storage */,
 				25148C7428A5F2C7005DA4D6 /* 8.RegularExpression */,
 				253160E628A358E80095D355 /* 7.Bluetooth */,
 				253FDD56289CB9D60046350C /* 0.KeyboardHide */,
@@ -207,9 +217,17 @@
 		2553D3372893D51B00CEA416 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				255D717D289F617900296BF8 /* SwiftCommunity */,
+				25D4FE3828B2752D0079742B /* SwiftCommunity */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		2593503328AFBF8800D2DB6E /* 9.Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2593503428AFBFA900D2DB6E /* Storage.swift */,
+			);
+			path = 9.Storage;
 			sourceTree = "<group>";
 		};
 		31ACF6877CBA8F97AC595B58 /* Pods */ = {
@@ -252,8 +270,10 @@
 			name = swift_knowledge;
 			packageProductDependencies = (
 				253160ED28A3AC060095D355 /* SwiftCommunity */,
-				253160F028A3C2140095D355 /* RxCocoa */,
-				253160F228A3C2140095D355 /* RxSwift */,
+				253A677328B30BE100A3FAA1 /* RxBlocking */,
+				253A677528B30BE100A3FAA1 /* RxCocoa */,
+				253A677728B30BE100A3FAA1 /* RxRelay */,
+				253A677928B30BE100A3FAA1 /* RxSwift */,
 			);
 			productName = swift_knowledge;
 			productReference = 25059B072880734F000AA943 /* swift_knowledge.app */;
@@ -284,7 +304,7 @@
 			);
 			mainGroup = 25059AFE2880734F000AA943;
 			packageReferences = (
-				253160EF28A3C2140095D355 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				253A677228B30BE100A3FAA1 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 25059B082880734F000AA943 /* Products */;
 			projectDirPath = "";
@@ -300,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2593503228AFBF2700D2DB6E /* dio.png in Resources */,
 				25059B1728807352000AA943 /* LaunchScreen.storyboard in Resources */,
 				25059B1428807352000AA943 /* Assets.xcassets in Resources */,
 				25059B122880734F000AA943 /* Main.storyboard in Resources */,
@@ -366,6 +387,7 @@
 				253160E828A3590F0095D355 /* BEEViewController.swift in Sources */,
 				25E063732887F20A00A87A52 /* ObservabeSwitch.swift in Sources */,
 				25059B0B2880734F000AA943 /* AppDelegate.swift in Sources */,
+				2593503528AFBFA900D2DB6E /* Storage.swift in Sources */,
 				253FDD62289CFD8B0046350C /* SubscriptionSet.swift in Sources */,
 				25059B0D2880734F000AA943 /* SceneDelegate.swift in Sources */,
 				25E0637528880D5600A87A52 /* TextInputViewController.swift in Sources */,
@@ -598,12 +620,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		253160EF28A3C2140095D355 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		253A677228B30BE100A3FAA1 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
-				kind = exactVersion;
-				version = 6.5.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -613,14 +635,24 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftCommunity;
 		};
-		253160F028A3C2140095D355 /* RxCocoa */ = {
+		253A677328B30BE100A3FAA1 /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 253160EF28A3C2140095D355 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 253A677228B30BE100A3FAA1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		253A677528B30BE100A3FAA1 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 253A677228B30BE100A3FAA1 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		253160F228A3C2140095D355 /* RxSwift */ = {
+		253A677728B30BE100A3FAA1 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 253160EF28A3C2140095D355 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 253A677228B30BE100A3FAA1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		253A677928B30BE100A3FAA1 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 253A677228B30BE100A3FAA1 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

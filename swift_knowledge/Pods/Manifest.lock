@@ -1,20 +1,37 @@
 PODS:
   - IQKeyboardManagerSwift (6.5.9)
+  - Protobuf (3.21.2)
   - SnapKit (5.6.0)
+  - SSZipArchive (2.4.3)
+  - SVGAPlayer (2.5.7):
+    - SVGAPlayer/Core (= 2.5.7)
+    - SVGAPlayer/ProtoFiles (= 2.5.7)
+  - SVGAPlayer/Core (2.5.7):
+    - SSZipArchive (>= 1.8.1)
+    - SVGAPlayer/ProtoFiles
+  - SVGAPlayer/ProtoFiles (2.5.7):
+    - Protobuf (~> 3.4)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
   - SnapKit
+  - SVGAPlayer
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManagerSwift
+    - Protobuf
     - SnapKit
+    - SSZipArchive
+    - SVGAPlayer
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  Protobuf: 818c6a87e44193a77f56b87c6a1c106efda7e062
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
+  SVGAPlayer: 318b85a78b61292d6ae9dfcd651f3f0d1cdadd86
 
-PODFILE CHECKSUM: 2d67724b66192ad745008fcfb93da890f226a9ec
+PODFILE CHECKSUM: f4c855dc893e6dbd99a638eb1cab7160a10d7f6c
 
 COCOAPODS: 1.11.2

@@ -9,13 +9,44 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SwiftCommunity
+import SVGAPlayer
 
 class ViewController: UIViewController {
 
     var messageDispose = MessageDispose()
 
+    let storage = Storage()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let url1 = URL(string: "https://cd-user-upload.hongsong.club/panda/gift_guard.svga")
+        storage.store(file: url1!)
+
+        let svgPlayer = SVGAPlayer(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        view.addSubview(svgPlayer)
+
+        let parser = SVGAParser.init()
+
+        let url = URL(string: "https://cd-user-upload.hongsong.club/panda/gift_guard.svga")
+        let svgaURL = storage.generate(file: url!)?.absoluteString
+        print("HSLiveRoomSVAGEffectManager 读取本地资源地址:\(svgaURL)")
+        if svgaURL!.starts(with: "file") { // 从本地加载
+            let la = URL(string: svgaURL!)!
+            let data = try? Data(contentsOf: la)
+            if let giftData = data {
+                parser.parse(with: giftData, cacheKey: "") {[weak self] videoEntity in
+                    guard let self = self else { return }
+                    svgPlayer.videoItem = videoEntity
+                    svgPlayer.startAnimation()
+                } failureBlock: { error in
+                    print("HSLiveRoomSVAGEffectManager加载本地礼物资源失败:\(error.localizedDescription)")
+                }
+            } else {
+                print("获取本地沙盒文件失败，从网络地址播放")
+            }
+        } else { // 从网络加载
+        }
     }
 
     @IBAction func tappedSend(_ sender: Any) {
@@ -35,14 +66,8 @@ class ViewController: UIViewController {
         }).dispose(by: messageDispose)
 
         let abc = MessageManager.addMessage({ (men: String) in
-            print("折叠屏幕很好用啊，机械键盘真的很牛叉，托多的好用，声音很哈听India那个以打算您覅了掉地诶接覅 ID爱上大姐夫 打死来看待举 ")
+            print("折叠屏幕很好用啊，机械键 ")
         })
-
-
-
-
-
-
 
         MessageManager.addMessage(handle2).dispose(by: messageDispose)
     }
@@ -51,14 +76,16 @@ class ViewController: UIViewController {
         /// 根据添加的类型匹配
         MessageManager.sendMessage(("China", 70))
         MessageManager.sendMessage("China")
+
+        let url = URL(string: "https://cd-user-upload.hongsong.club/panda/gift_guard.svga")
+        storage.store(file: url!)
     }
 
     @IBAction func tappedDispose(_ sender: Any) {
 //        token?.onCancel()
 
-        
-
-
+        let url = URL(string: "https://cd-user-upload.hongsong.club/panda/gift_guard.svga")
+        let data = storage.read(file: url!)
     }
 
 

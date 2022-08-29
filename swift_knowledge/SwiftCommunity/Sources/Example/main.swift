@@ -7,15 +7,41 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 // MARK: - RxSwift
 
+let disposeBag = DisposeBag()
 
-//let disposeBag = DisposeBag()
+//let observable = Observable.of(1, 2, 3, 4, 5, 6)
+//let observable = Observable<Int>.create { observer in
+//    observer.onNext(1)
+//    return Disposables.create()
+//}
+
+//let observable = BehaviorSubject<Void>(value: ())
 //
-//let observer = Observable.of(1, 2, 3, 4, 5, 6)
-//
-//observer.subscribe(
+//observable.subscribe(
+//    onNext: {
+//        print("onCompleted")
+//    }
+//).disposed(by: disposeBag)
+
+let obmerage = RxMerage()
+obmerage.observable.subscribe { res in
+    print("这是结果 \(res)")
+} onError: { error in
+
+} onCompleted: {
+
+} onDisposed: {
+
+}
+.disposed(by: disposeBag)
+
+obmerage.emit()
+
+//observable.subscribe(
 //    onNext: {
 //        print($0)
 //    },
@@ -30,6 +56,10 @@ import RxSwift
 //    }
 //).disposed(by: disposeBag)
 
+
+let ls = [1,2,3,4,5]
+
+let a = ls.sorted { $0 < $1 }.first
 
 // MARK: - SubscriptionSet
 
@@ -96,15 +126,5 @@ import RxSwift
 //
 //typealias DictionaryIN = Dictionary<Name Int>
 
-var list = [Int]()
-print(list.endIndex)
-print(list)
-list.insert(0, at: list.endIndex)
-print(list.endIndex)
-print(list)
-list.insert(1, at: list.endIndex)
-print(list.endIndex)
-print(list)
-
-//dispatchMain()
+dispatchMain()
 
